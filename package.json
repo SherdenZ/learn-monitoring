@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Gvozd/learn-monitoring/issues"
   },
-  "homepage": "https://github.com/Gvozd/learn-monitoring#readme"
+  "homepage": "https://github.com/Gvozd/learn-monitoring#readme",
+  "devDependencies": {
+    "eslint": "^5.9.0"
+  }
 }
