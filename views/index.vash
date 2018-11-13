@@ -1,4 +1,7 @@
 @html.extend('layout', function(model) {
+  @html.block('scripts', function(model) {
+    <script type="text/javascript" src="javascripts/index.js"></script>
+  })
   @html.block('content', function(model) {
     <h1>@model.title</h1>
     <p>Welcome to @model.title</p>

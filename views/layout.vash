@@ -4,6 +4,7 @@
   <meta>
   <title>@model.title</title>
   <link rel='stylesheet' href='/stylesheets/style.css' />
+  @html.block('scripts')
 </head>
 <body>
   @html.block('content')
