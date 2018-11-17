@@ -1,6 +1,10 @@
-loadUrlAsDom('https://ya.ru', function(err, doc) {
-    console.log(err, doc);
-});
+loadUrlAsDom(
+    'https://vk.com/wkview.php?act=show&al=1&from=market&loc=market-12344082&query=%7B%7D&w=product-12344082_2095243%2Fquery',
+    function(err, doc) {
+        console.log(err, doc);
+        debugger;
+    }
+);
 
 function loadUrlAsDom(url, cb) {
     loadUrlByProxy(url, function(err, res) {
@@ -9,7 +13,7 @@ function loadUrlAsDom(url, cb) {
             return;
         }
         var parser = new DOMParser();
-        var doc = parser.parseFromString(res, "text/html");
+        var doc = parser.parseFromString(res.slice(4), "text/html");
         cb(null, doc);
     });
 }
