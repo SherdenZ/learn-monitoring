@@ -1,7 +1,11 @@
 loadUrlAsDom(
     'https://vk.com/wkview.php?act=show&al=1&from=market&loc=market-12344082&query=%7B%7D&w=product-12344082_2095243%2Fquery',
     function(err, doc) {
-        console.log(err, doc);
+        var title = doc.querySelector('.market_item_title').getAttribute('title');
+        var viewsText = doc.querySelector('.market_item_stats').lastChild.textContent;
+        var views = parseInt(viewsText.split(' ')[0])
+
+        console.log(title, views);
         debugger;
     }
 );
